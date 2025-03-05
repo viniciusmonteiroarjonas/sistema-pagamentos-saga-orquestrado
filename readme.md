@@ -35,3 +35,10 @@ Em nossa arquitetura, teremos 5 serviços:
 - **Inventory-Service:** microsserviço responsável por realizar a baixa do estoque dos produtos de um pedido. Este microsserviço guardará a informação da baixa de um produto para o ID de um pedido. O banco de dados utilizado será o PostgreSQL.
 
 Todos os serviços da arquitetura irão subir através do arquivo docker-compose.yml.
+
+
+## Executando aplicação
+
+```sh
+    docker-compose up --build -d
+```

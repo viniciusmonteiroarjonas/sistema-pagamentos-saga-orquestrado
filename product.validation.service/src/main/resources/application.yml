@@ -4,3 +4,16 @@ server:
 spring:
   application:
     name: Product Validation Service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:product}
+    username: ${DB_USER:admin}
+    password: ${DB_PASSWORD:admin}
+
+    jpa:
+      hibernate:
+        ddl-auto: create-drop
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect

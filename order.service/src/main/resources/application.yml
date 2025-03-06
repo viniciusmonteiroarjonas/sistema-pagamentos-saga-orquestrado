@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: Order Service
+
+  data:
+    mongodb:
+      database: admin
+      uri: ${MONGO_DB_URI:mongodb://admin:admin@localhost:27017}

@@ -4,3 +4,16 @@ server:
 spring:
   application:
     name: Invetory Service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5434}/${DB_NAME:inventory}
+    username: ${DB_USER:admin}
+    password: ${DB_PASSWORD:admin}
+
+    jpa:
+      hibernate:
+        ddl-auto: create-drop
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
